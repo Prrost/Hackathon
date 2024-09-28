@@ -6,7 +6,7 @@ from Predicter import Predicter
 def calculate_delay():
     left_turns = int(entry_left_turns.get())
     right_turns = int(entry_right_turns.get())
-    traffic_level = float(traffic_level_var.get())
+    traffic_level = float(entry_traffic.get())
     distance = float(entry_distance.get())
     weather = weather_var.get()
     day = day_var.get()
@@ -31,8 +31,8 @@ entry_right_turns = tk.Entry(root)
 entry_right_turns.pack()
 
 tk.Label(root, text="Уровень трафика (от 0 до 10):").pack()
-traffic_level_var = tk.StringVar(value="5")
-tk.Entry(root, textvariable=traffic_level_var).pack()
+entry_traffic = tk.Entry(root)
+entry_traffic.pack()
 
 tk.Label(root, text="Расстояние (в км):").pack()
 entry_distance = tk.Entry(root)
